@@ -1,0 +1,32 @@
+.title {
+  color: green;
+}
+
+.thumbnail {
+  max-width: 40px;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+  width: 350px;
+}
+
+.cardThumbnail {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+.cardContent {
+  padding: 10px;
+}
+
+.cardTitle {
+  color: #07a;
+  // border-bottom: 1px solid #07a;
+  font-family: sans-serif;
+  font-size: 20px;
+  margin-bottom: 10px;
+}

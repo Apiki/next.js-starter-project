@@ -8,23 +8,18 @@ const paths = {
 };
 
 module.exports = withSass({
-  cssModules: true,
-  cssLoaderOptions: {
-    importLoaders: 1,
-    localIdentName: '[hash:base64:5]-[local]',
-  },
-
   // build folder destiny
   distDir: '../dist',
 
   // webpack custom config
   webpack(config) {
-    config.plugins.push(
-      new StyleLintPlugin({
-        configFile: '.stylelintrc.json',
-        context: './src',
-        emitErrors: true,
-      }),
+    // rules
+    config.module.rules.push(
+      {
+        enforce: 'pre',
+        test: /\.(js|jsx|css|scss)$/,
+        loader: 'import-glob',
+      },
     );
 
     // aliases
@@ -34,6 +29,15 @@ module.exports = withSass({
       '@styles': join(paths.shared, 'styles'),
       '@components': join(paths.shared, 'components'),
     });
+
+    // plugins
+    config.plugins.push(
+      new StyleLintPlugin({
+        configFile: '.stylelintrc.json',
+        context: './src',
+        emitErrors: true,
+      }),
+    );
 
     return config;
   },

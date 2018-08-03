@@ -31,6 +31,7 @@ src
 - [x] Adicionar autoprefixer com suporte ao IE11
 - [x] Adicionar Storybook
 - [x] Adicionar Stylelint
-- [ ] Adicionar suporte aos estilos no storybook
+- [x] Adicionar suporte aos estilos no storybook
 - [x] Adicionar teste (jest)
 - [ ] Só buildar se todos os testes passarem
+- [ ] Montar uma wiki

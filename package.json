@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "BABEL_ENV=test jest",
     "dev": "node server.js",
     "build": "next build src",
     "start": "NODE_ENV=production node server.js",
@@ -15,10 +15,6 @@
     "lint-fix:styles": "stylelint --fix ./src/**",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
-  },
-  "jest": {
-    "verbose": true,
-    "testURL": "http://localhost/"
   },
   "keywords": [],
   "author": "",
@@ -31,22 +27,24 @@
     "react-dom": "^16.4.1"
   },
   "devDependencies": {
-    "@storybook/addons": "^3.4.10",
+    "@storybook/addon-options": "^3.4.10",
     "@storybook/react": "^3.4.10",
     "@zeit/next-sass": "^0.2.0",
-    "babel-core": "^6.26.3",
     "babel-jest": "^23.4.2",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
-    "babel-runtime": "^6.26.0",
+    "css-loader": "^1.0.0",
     "eslint": "^5.2.0",
     "eslint-config-airbnb": "^17.0.0",
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.10.0",
+    "import-glob": "^1.5.0",
     "jest": "^23.4.2",
     "node-sass": "^4.9.2",
     "react-test-renderer": "^16.4.2",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.21.0",
     "stylelint": "^9.4.0",
     "stylelint-config-recommended-scss": "^3.2.0",
     "stylelint-order": "^0.8.1",

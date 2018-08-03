@@ -1,11 +1,15 @@
 module.exports = {
   "extends": "airbnb",
   "rules":{
-    // Prevent warnings for webpack resolve aliases.
+    "no-undef": "off",
+    "no-console": "off",
+    "no-param-reassign": "off",
     "import/no-unresolved": "off",
-    // Prevent warnings for webpack extension resolution.
     "import/extensions": "off",
     "import/no-extraneous-dependencies": "off",
-    "no-param-reassign": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "react/jsx-filename-extension": "off",
+    "react/destructuring-assignment": "off",
+    "react/require-default-props": "off"
   }
 };

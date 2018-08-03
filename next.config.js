@@ -8,11 +8,11 @@ const paths = {
 };
 
 module.exports = withSass({
-  /* cssModules: true,
+  cssModules: true,
   cssLoaderOptions: {
     importLoaders: 1,
-    localIdentName: "[hash:base64:5]-[local]",
-  }, */
+    localIdentName: '[hash:base64:5]-[local]',
+  },
 
   // build folder destiny
   distDir: '../dist',

@@ -7,7 +7,12 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node server.js",
     "build": "next build src",
-    "start": "NODE_ENV=production node server.js"
+    "start": "NODE_ENV=production node server.js",
+    "lint": "yarn run lint:scripts && yarn run lint:styles",
+    "lint:scripts": "eslint ./src/**",
+    "lint:styles": "stylelint .src/**",
+    "lint-fix:scripts": "eslint --fix ./src/**",
+    "lint-fix:styles": "stylelint --fix ./src/**"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +25,17 @@
   },
   "devDependencies": {
     "@zeit/next-sass": "^0.2.0",
-    "node-sass": "^4.9.2"
+    "eslint": "^5.2.0",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.10.0",
+    "node-sass": "^4.9.2",
+    "stylelint": "^9.4.0",
+    "stylelint-config-recommended-scss": "^3.2.0",
+    "stylelint-order": "^0.8.1",
+    "stylelint-scss": "^3.2.0",
+    "stylelint-webpack-plugin": "^0.10.5",
+    "stylelint-z-index-value-constraint": "^1.0.0"
   }
 }

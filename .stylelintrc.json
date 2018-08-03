@@ -1,0 +1,23 @@
+{
+  "extends": "stylelint-config-recommended-scss",
+  "plugins": [
+    "stylelint-order",
+    "stylelint-scss",
+    "stylelint-z-index-value-constraint"
+  ],
+  "rules": {
+    "indentation": 2,
+    "order/properties-alphabetical-order": true,
+    "order/order": [
+      "custom-properties",
+      "dollar-variables",
+      "declarations",
+      "rules",
+      "at-rules"
+    ],
+    "plugin/z-index-value-constraint": {
+      "min": 0,
+      "max": 10
+    }
+  }
+}

@@ -1,21 +1,8 @@
-import Layout from '../shared/components/layout'
-import Link from 'next/link'
-
-const PostLink = (props) => (
-  <li>
-    <Link as={`/p/${props.id}`} href={`/post?title=${props.title}`}>
-      <a>{props.title}</a>
-    </Link>
-  </li>
-)
+import Layout from '@components/layout'
 
 export default () => (
   <Layout>
-    <h1>My Blog</h1>
-    <ul>
-      <PostLink id="hello-nextjs" title="Hello Next.js"/>
-      <PostLink id="learn-nextjs" title="Learn Next.js is awesome"/>
-      <PostLink id="deploy-nextjs" title="Deploy apps with Zeit"/>
-    </ul>
+    <h1>Next.js Starter Project</h1>
+    <p>Let's get started.</p>
   </Layout>
 )

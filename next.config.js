@@ -18,6 +18,7 @@ module.exports = withSass({
 
   // webpack custom config
   webpack: function(config) {
+    // aliases
     config.resolve.alias = Object.assign({}, config.resolve.alias, {
       pages: paths.pages,
       shared: paths.shared,

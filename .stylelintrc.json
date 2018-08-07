@@ -12,8 +12,7 @@
       "custom-properties",
       "dollar-variables",
       "declarations",
-      "rules",
-      "at-rules"
+      "rules"
     ],
     "plugin/z-index-value-constraint": {
       "min": 0,

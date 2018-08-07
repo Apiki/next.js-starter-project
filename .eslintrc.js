@@ -11,6 +11,7 @@ module.exports = {
     "react/jsx-filename-extension": "off",
     "react/destructuring-assignment": "off",
     "react/require-default-props": "off",
-    "react/react-in-jsx-scope": "off"
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-one-expression-per-line": "off"
   }
 };

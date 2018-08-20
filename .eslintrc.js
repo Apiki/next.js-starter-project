@@ -12,6 +12,7 @@ module.exports = {
     "react/destructuring-assignment": "off",
     "react/require-default-props": "off",
     "react/react-in-jsx-scope": "off",
-    "react/jsx-one-expression-per-line": "off"
+    "react/jsx-one-expression-per-line": "off",
+    "react/forbid-prop-types": "off"
   }
 };

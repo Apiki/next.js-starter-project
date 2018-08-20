@@ -1,0 +1,113 @@
+@function get-prefix($_prefix: $prefix) {
+  @return $_prefix;
+}
+
+@function remove-unit( $number ) {
+  $unit: unit( $number );
+  $one: 1;
+
+  @if $unit == "px" { $one: 1px; }
+  @if $unit == "em" { $one: 1px; }
+  @if $unit == "%"  { $one: 1px; }
+
+  @return $number / $one;
+}
+
+@function selector-type($selector) {
+  $_type: str-slice($selector, 1, 1);
+
+  @if($_type == '.') {
+    @return class;
+  } @else if($_type == '#') {
+    @return id;
+  } @else {
+    @return html;
+  }
+
+  @return $_type-class;
+}
+
+@function str-replace($string, $search, $replace: '') {
+  $_index: str-index($string, $search);
+
+  @if($_index) {
+    @return str-slice($string, 1, $_index - 1) + $replace + str-replace(str-slice($string, $_index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+}
+
+@function flex( $target, $context, $unit: "em" ) {
+  $size: remove-unit( $target ) / remove-unit( $context );
+
+  @if $unit == "em" {
+    @return #{$size}em;
+  }
+
+  @if $unit == "%" {
+    @return percentage( $size );
+  }
+}
+
+@function perc( $target, $context ) {
+  @return flex( $target, $context, "%" );
+}
+
+@function em( $target, $context: 16px ) {
+  @return flex( $target, $context, "em" );
+}
+
+@function get( $key, $map ) {
+  @return map-get( $map, $key );
+}
+
+// -- Grid
+// -- ex : grid( desktop, content )
+@function grid( $grid-size, $attr : base, $_grid : $grid ) {
+  $item : map-get( $_grid, $grid-size );
+
+  @if type-of( $item ) == map {
+    @return grid( $attr, null, $item );
+  }
+
+  @return $item;
+}
+
+// -- Fonts Size
+// -- ex : font-size( mobile )
+@function font-size( $font-size, $attr : base, $_font-size : $sizes ) {
+  $item : map-get( $_font-size, $font-size );
+
+  @return $item;
+}
+
+// -- Fonts Family
+// -- ex : font-family( primary, bold )
+@function font( $font-family, $attr : base, $_font-family : $fonts ) {
+  $item : map-get( $_font-family, $font-family );
+
+  @if type-of( $item ) == map {
+    @return font( $attr, null, $item );
+  }
+
+  @return $item;
+}
+
+// -- Color
+// -- ex : color( primary, hover )
+@function color( $color, $attr : base, $_color : $colors ) {
+  $item : map-get( $_color, $color );
+
+  @if type-of( $item ) == map {
+    @return color( $attr, null, $item );
+  }
+
+  @return $item;
+}
+
+// -- Image
+// -- ex: image( 'image-file.png' )
+@function image( $file, $directory : '/assets/images' ) {
+  @return url( '#{$directory}/#{$file}' );
+}
+

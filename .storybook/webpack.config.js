@@ -16,7 +16,7 @@ module.exports = (baseConfig) => {
     },
     {
       test: /\.(css|scss)$/,
-      use: [ 'style-loader', 'css-loader', 'sass-loader']
+      use: [ 'style-loader', 'css-loader', 'sass-loader' ]
     }
   );
 
@@ -24,6 +24,7 @@ module.exports = (baseConfig) => {
   baseConfig.resolve.alias = Object.assign({}, baseConfig.resolve.alias, {
     pages: paths.pages,
     shared: paths.shared,
+    'storybook-ui': join(__dirname, 'ui'),
     '@styles': join(paths.shared, 'styles'),
     '@components': join(paths.shared, 'components'),
   });

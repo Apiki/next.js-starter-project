@@ -1,4 +1,3 @@
-import './style.scss';
 import Layout from '@components/layout';
 
 export default () => (

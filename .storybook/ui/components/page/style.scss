@@ -1,0 +1,17 @@
+@import '~storybook-ui/styles/main.scss';
+
+.ui-page {
+  padding: 33px 0;
+
+  .ui-header {
+    padding: 0 150px;
+  }
+
+  .ui-title {
+    color: color( text, title );
+    font-family: unquote(font( secondary ));
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+}

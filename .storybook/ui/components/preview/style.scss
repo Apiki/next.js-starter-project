@@ -1,0 +1,19 @@
+@import '~storybook-ui/styles/main.scss';
+
+.ui-boxed {
+  margin: 0 auto;
+  padding: 0 150px;
+}
+
+.ui-preview {
+  .ui-title {
+    border-bottom: 1px solid color( detail, base );
+    color: color( text, title );
+    font-family: unquote(font( secondary ));
+    font-size: 22.5px;
+    font-weight: 600;
+    margin-bottom: 18px;
+    margin-top: 45px;
+    padding-bottom: 15px;
+  }
+}

@@ -1,0 +1,16 @@
+$col: 70px;
+$gutter: 30px;
+
+$grid: (
+  small: 480px,
+  small-x: 640px,
+
+  medium: 768px,
+  medium-x: 1024px,
+
+  large: ( 12 * ( $col + $gutter ) ),
+
+  container: ( 12 * ( $col + $gutter ) ),
+
+  gutter: $gutter
+);

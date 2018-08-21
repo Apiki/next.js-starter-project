@@ -27,7 +27,9 @@
     "react-dom": "^16.4.1"
   },
   "devDependencies": {
+    "@storybook/addon-knobs": "^3.4.10",
     "@storybook/addon-options": "^3.4.10",
+    "@storybook/addon-viewport": "^3.4.10",
     "@storybook/react": "^3.4.10",
     "@zeit/next-sass": "^0.2.0",
     "babel-jest": "^23.4.2",

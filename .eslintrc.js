@@ -6,6 +6,7 @@ module.exports = {
     "no-param-reassign": "off",
     "import/no-unresolved": "off",
     "import/extensions": "off",
+    "import/prefer-default-export": "off",
     "import/no-extraneous-dependencies": "off",
     "jsx-a11y/anchor-is-valid": "off",
     "react/jsx-filename-extension": "off",

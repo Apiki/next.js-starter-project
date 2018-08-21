@@ -7,21 +7,27 @@ import {
   Preview,
   Section,
   Highlight,
+  Properties,
 } from 'storybook-ui';
 
 storiesOf('Button', module)
   .add('with text', () => (
     <Page title="with text">
-      <Preview>
+      <Preview isBoxed>
         <button type="button" onClick={action('clicked')}>Hello Button</button>
       </Preview>
+
       <Section title="Import">
         <Highlight>
           {"import { Button } from '@components';"}
         </Highlight>
       </Section>
 
-      <h2>Os parâmetros virão aqui</h2>
+      <Section title="Properties">
+        <Properties>
+          <button type="button" onClick={action('clicked')}>Hello Button</button>
+        </Properties>
+      </Section>
 
       <Section title="Usage">
         <Highlight>

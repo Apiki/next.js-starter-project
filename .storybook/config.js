@@ -5,6 +5,8 @@ import { setOptions } from '@storybook/addon-options';
 setOptions({
   name: 'Project UI',
   url: '#',
+  showAddonPanel: false,
+  hierarchySeparator: /\//
 })
 
 // automatically import all files ending in *.stories.js

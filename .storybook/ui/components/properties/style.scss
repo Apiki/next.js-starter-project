@@ -1,0 +1,52 @@
+@import '~storybook-ui/styles/main.scss';
+
+.ui-table-responsible {
+  display: block;
+  font-family: unquote(font( secondary ));
+  font-size: 15px;
+  line-height: 24px;
+  overflow-x: auto;
+  width: 100%;
+
+  table {
+    margin-bottom: 30px;
+    max-width: 100%;
+    min-width: 800px;
+    text-align: left;
+    width: 100%;
+  }
+
+  sup { color: color(alert, warning); }
+
+  th,
+  td {
+    border-bottom: 1px solid #ddd;
+    min-width: 110px;
+    padding: 12px;
+    vertical-align: top;
+  }
+
+  thead th {
+    border-bottom: 2px solid #ddd;
+    font-weight: 600;
+  }
+
+  tbody {
+    td:first-child,
+    th:first-child,
+    td:nth-child(3),
+    th:nth-child(3) {
+      color: color(text, link);
+    }
+
+    td:nth-child(2),
+    th:nth-child(2) {
+      color: color(text, code);
+    }
+
+    tr:last-child td,
+    tr:last-child th {
+      border-bottom: 0;
+    }
+  }
+}

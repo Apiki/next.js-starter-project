@@ -1,0 +1,55 @@
+@import '~storybook-ui/styles/main.scss';
+
+.ui-type {
+  font-family: unquote(font(primary));
+  margin: 1em 3em 1em 0;
+
+  .ui-slug {
+    color: color(text, lighten);
+    font-size: 20px;
+    padding-top: 25px;
+  }
+
+  .ui-name {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 25px;
+    margin: 10px 0 0;
+    width: 100%;
+  }
+
+  .ui-type-ex {
+    color: color(text, lighten);
+    font-size: 30px;
+    line-height: 30px;
+    margin: 10px 0 0;
+  }
+}
+
+.ui-typography {
+  &:not(:first-child) {
+    margin-top: 40px;
+  }
+
+  .ui-title {
+    font-family: unquote(font( primary ));
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 25px;
+    width: 100%;
+
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+  .ui-list {
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+
+    > div {
+      margin-right: 30px;
+    }
+  }
+}

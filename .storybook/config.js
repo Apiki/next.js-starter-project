@@ -10,11 +10,17 @@ setOptions({
   hierarchyRootSeparator: /\|/,
 });
 
-// automatically import all files ending in *.story.js
-const req = require.context('../src/shared/components', true, /\.story\.js$/);
+function importAll(req) {
+  req.keys().forEach(filename => req(filename));
+}
 
-function loadStories () {
-  req.keys().forEach((filename) => req(filename))
-};
+function loadStories() {
+  let req;
+  req = require.context('./stories', true, /\.story\.js$/);
+  importAll(req);
+
+  req = require.context('../src/shared/components', true, /\.story\.js$/);
+  importAll(req);
+}
 
 configure(loadStories, module);

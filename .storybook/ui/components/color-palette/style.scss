@@ -1,0 +1,73 @@
+@import '~storybook-ui/styles/main.scss';
+
+.ui-color {
+  border-radius: 4px;
+  box-shadow: 0 3px 4px rgba(#000, 0.1), 0 1px 0 rgba(#000, 0.1);
+  font-family: unquote(font( primary ));
+  margin: 1em 1em 1em 0;
+  overflow: hidden;
+  width: 165px;
+
+  .ui-swatch {
+    height: 100px;
+    position: relative;
+    width: auto;
+
+    &::before {
+      background-color: #fff;
+      background-image: linear-gradient(45deg, #dddadc 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, #dddadc 75%, #dddadc), linear-gradient(45deg, #dddadc 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, #dddadc 75%, #dddadc);
+      background-position: 0 0, 6px 6px;
+      background-size: 12px 12px;
+      content: '';
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: -1;
+    }
+  }
+
+  .ui-name {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 16px + 8;
+    margin: 8px;
+  }
+
+  .ui-hex {
+    color: #8492A6;
+    font-size: 11px;
+    line-height: 11px + 8;
+    margin: 8px;
+    text-transform: uppercase;
+  }
+}
+
+.ui-color-palette {
+  &:not(:first-child) {
+    margin-top: 40px;
+  }
+
+  .ui-title {
+    font-family: unquote(font( primary ));
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 25px;
+    width: 100%;
+
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+  .ui-list {
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+
+    > div {
+      margin-right: 30px;
+    }
+  }
+}

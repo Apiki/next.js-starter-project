@@ -1,17 +1,17 @@
 import React from 'react';
 import t from 'prop-types';
 
-const Color = ({ hex, name }) => (
+const Color = ({ name, value }) => (
   <div className="ui-color">
-    <div className="ui-swatch" style={{ background: hex }} />
+    <div className="ui-swatch" style={{ background: value }} />
 
     <p className="ui-name">{ name }</p>
-    <p className="ui-hex">HEX: { hex }</p>
+    <p className="ui-hex">HEX: { value }</p>
   </div>
 );
 
 Color.propTypes = {
-  hex: t.string.isRequired,
+  value: t.string.isRequired,
   name: t.string.isRequired
 }
 

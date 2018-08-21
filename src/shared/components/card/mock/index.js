@@ -15,8 +15,8 @@ export const usage = () => (
         },
       },
     }}
+    link={text('Link', '#')}
     title={text('Title', 'Card Title')}
     excerpt={text('Excerpt', 'I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.')}
-    link={text('Link', '#')}
   />
 );

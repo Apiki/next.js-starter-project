@@ -2,23 +2,23 @@ import React from 'react';
 import t from 'prop-types';
 
 import './style.scss';
-import Color from './color';
+import Type from './type';
 
-const ColorPalette = ({ title, items }) => (
-  <div className="ui-color-palette">
+const Typography = ({ title, items }) => (
+  <div className="ui-typography">
     <h3 className="ui-title">{ title }</h3>
 
     <div className="ui-list">
       {items.map((item, index) => (
-        <Color key={index} {...item} />
+        <Type key={index} {...item} />
       ))}
     </div>
   </div>
 );
 
-ColorPalette.propTypes = {
+Typography.propTypes = {
   title: t.string.isRequired,
   items: t.array.isRequired,
 };
 
-export { ColorPalette };
+export { Typography };

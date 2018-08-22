@@ -1,5 +1,10 @@
 @import '~storybook-ui/styles/main.scss';
 
+[class^="ui-"], [class*=" ui-"] {
+  margin: 0;
+  padding: 0;
+}
+
 .ui-page {
   padding: 33px 0;
 

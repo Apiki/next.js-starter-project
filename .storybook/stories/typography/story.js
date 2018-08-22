@@ -4,16 +4,16 @@ import { Page, Section } from 'storybook-ui';
 
 import { Usage } from './mock';
 
-const stories = storiesOf('Styleguide|Colors', module);
+const stories = storiesOf('Styleguide|Typography', module);
 const addStory = (description, callback) => (
   stories.add(description, () => (
-    <Page title={description}>{callback()}</Page>
+    <Page title="Typography">{callback()}</Page>
   ))
 );
 
 addStory('All', () => (
   <div>
-    <Section title="Preview">
+    <Section>
       <Usage />
     </Section>
   </div>

@@ -5,16 +5,18 @@ import './style.scss';
 
 const Section = ({ title, children }) => (
   <section className="ui-section">
-    <div className="ui-header">
-      <h2 className="ui-title">{ title }</h2>
-    </div>
+    {title && (
+      <div className="ui-header">
+        <h2 className="ui-title">{ title }</h2>
+      </div>
+    )}
 
     <div className="ui-content">{ children }</div>
   </section>
 );
 
 Section.propTypes = {
-  title: t.string.isRequired,
+  title: t.string,
   children: t.any.isRequired
 };
 

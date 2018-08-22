@@ -26,9 +26,13 @@ const Card = ({
   </div>
 );
 
+Card.defaultProps = {
+  title: 'Lorem Ipsum',
+};
+
 Card.propTypes = {
   link: t.string.isRequired,
-  title: t.string.isRequired,
+  title: t.string,
   excerpt: t.string,
   featuredMedia: t.shape({
     alt: t.string,

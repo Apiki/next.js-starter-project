@@ -20,6 +20,16 @@ module.exports = withSass({
         test: /\.(js|jsx|css|scss)$/,
         loader: 'import-glob',
       },
+      {
+        test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|txt)(\?.*)?$/,
+        include: join(__dirname, '..', 'src'),
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: 'assets/[name].[hash:8].[ext]',
+          },
+        },
+      },
     );
 
     // aliases

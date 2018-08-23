@@ -9,13 +9,11 @@
     ttf: 'truetype',
     eot: 'embedded-opentype'
   );
-
   @each $ext in $exts {
     $font-ext: if(map-has-key($_exts, $exts), $ext + map-get($_exts, $ext), $ext);
     $font-format: if(map-has-key($_formats, $ext), map-get($_formats, $ext), $ext);
-    $_source: append($_source, url($path + '.' + $font-ext) format(quote($font-format), comma));
+    $_source: append($_source, url($path + '.' + $font-ext) format(quote($font-format)), comma);
   }
-
   @font-face {
     font-display: swap;
     font-family: quote($name);

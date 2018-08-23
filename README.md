@@ -29,3 +29,5 @@ src
 - [Stylelint](https://marketplace.visualstudio.com/items?itemName=shinnn.stylelint)
 - [Jest](https://marketplace.visualstudio.com/items?itemName=Orta.vscode-jest)
 
+## To Do List
+[] Carregar arquivos de fontes, imagens...

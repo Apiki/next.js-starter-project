@@ -13,8 +13,8 @@
     "lint:styles": "stylelint .src/**",
     "lint-fix:scripts": "eslint --fix ./src/**",
     "lint-fix:styles": "stylelint --fix ./src/**",
-    "storybook": "start-storybook -p 6006",
-    "build:storybook": "cross-env NODE_ENV=production BABEL_ENV=production build-storybook -c .storybook -o docs"
+    "storybook": "start-storybook -p 6006 -c storybook",
+    "build:storybook": "cross-env NODE_ENV=production BABEL_ENV=production build-storybook -c storybook -o docs"
   },
   "keywords": [],
   "author": "",
@@ -42,6 +42,7 @@
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.10.0",
+    "file-loader": "^2.0.0",
     "import-glob": "^1.5.0",
     "jest": "^23.4.2",
     "node-sass": "^4.9.2",

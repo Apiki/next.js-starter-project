@@ -16,10 +16,10 @@ function importAll(req) {
 
 function loadStories() {
   let req;
-  req = require.context('./stories', true, /story\.js$/);
+  req = require.context('./stories', true, /\.story\.js$/);
   importAll(req);
 
-  req = require.context('../src/shared/components', true, /story\.js$/);
+  req = require.context('../src/shared/components', true, /\.story\.js$/);
   importAll(req);
 }
 

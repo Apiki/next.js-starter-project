@@ -1,7 +1,7 @@
 import React from 'react';
 import t from 'prop-types';
 
-import './style.scss';
+import './typography.scss';
 import Type from './type';
 
 const Typography = ({ title, items }) => (
@@ -9,8 +9,8 @@ const Typography = ({ title, items }) => (
     <h3 className="ui-title">{ title }</h3>
 
     <div className="ui-list">
-      {items.map((item, index) => (
-        <Type key={index} {...item} />
+      {items.map(item => (
+        <Type key={item.title} {...item} />
       ))}
     </div>
   </div>

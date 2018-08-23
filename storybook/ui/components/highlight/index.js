@@ -2,9 +2,14 @@ import React, { PureComponent } from 'react';
 import t from 'prop-types';
 import Prism from 'prismjs';
 
-import './style.scss';
+import './highlight.scss';
 
 class Highlight extends PureComponent {
+  constructor(props) {
+    super(props);
+    this.mount = this.mount.bind(this);
+  }
+
   componentDidMount() {
     this.highlight();
   }
@@ -13,7 +18,7 @@ class Highlight extends PureComponent {
     this.highlight();
   }
 
-  mount = node => {
+  mount(node) {
     this.domNode = node;
   }
 
@@ -26,7 +31,7 @@ class Highlight extends PureComponent {
       className,
       children,
       component: Wrap,
-    } = this.props
+    } = this.props;
 
     return (
       <div className="ui-highlight">
@@ -42,15 +47,15 @@ class Highlight extends PureComponent {
 }
 
 Highlight.defaultProps = {
-  component: `pre`,
-  className: 'language-javascript language-jsx'
+  component: 'pre',
+  className: 'language-javascript language-jsx',
 };
 
 Highlight.propTypes = {
   async: t.bool,
   className: t.string,
   children: t.any.isRequired,
-  component: t.node.isRequired
+  component: t.node,
 };
 
 export { Highlight };

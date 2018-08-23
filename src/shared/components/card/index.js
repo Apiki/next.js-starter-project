@@ -2,7 +2,7 @@ import React from 'react';
 import t from 'prop-types';
 import { getThumbnail } from 'shared/helpers/media';
 
-import './style.scss';
+import './card.scss';
 
 const Card = ({
   link,

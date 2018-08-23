@@ -1,7 +1,7 @@
 import React from 'react';
 import t from 'prop-types';
 
-import './style.scss';
+import './section.scss';
 
 const Section = ({ title, children }) => (
   <section className="ui-section">
@@ -17,7 +17,7 @@ const Section = ({ title, children }) => (
 
 Section.propTypes = {
   title: t.string,
-  children: t.any.isRequired
+  children: t.any.isRequired,
 };
 
 export { Section };

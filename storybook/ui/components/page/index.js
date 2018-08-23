@@ -1,7 +1,7 @@
 import React from 'react';
 import t from 'prop-types';
 
-import './style.scss';
+import './page.scss';
 
 const Page = ({ title, children }) => (
   <main className="ui-page">

@@ -40,13 +40,13 @@
 }
 
 .wp-caption-text {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 5px 10px;
   background: rgba(0, 0, 0, 0.5);
+  bottom: 0;
   color: #fff;
+  left: 0;
+  padding: 5px 10px;
+  position: absolute;
+  right: 0;
 }
 
 /* ------------------------------------------------------------ *\
@@ -54,22 +54,22 @@
 \* ------------------------------------------------------------ */
 
 .gallery {
-  position: relative;
   overflow: hidden;
   padding-bottom: 20px;
+  position: relative;
 }
 
 .gallery .wp-caption-text {
-  right: 10px;
   bottom: 10px;
   left: 10px;
+  right: 10px;
   text-align: left;
 }
 
 .gallery-item {
   float: left;
-  position: relative;
   padding: 10px;
+  position: relative;
 }
 
 .gallery-item img {
@@ -138,19 +138,19 @@
 }
 
 .paging a {
-  display: inline-block;
-  padding: 4px 10px;
   border: 1px solid #000;
-  margin: 0 2px;
-  text-decoration: none;
   border-radius: 4px;
+  display: inline-block;
+  margin: 0 2px;
+  padding: 4px 10px;
+  text-decoration: none;
 }
 
 .paging .current a,
 .paging a:hover {
-  text-decoration: none;
   background: #000;
   color: #fff;
+  text-decoration: none;
 }
 
 .paging-label {
@@ -175,20 +175,20 @@
 
 .section-comments ol,
 .section-comments ul {
-  padding: 0;
-  margin: 0;
   list-style: none outside none;
+  margin: 0;
+  padding: 0;
 }
 
 .section-comments h3 {
-  position: relative;
   padding: 0 0 10px;
+  position: relative;
 }
 
 .section-comments h3 small {
   position: absolute;
-  top: 0;
   right: 0;
+  top: 0;
 }
 
 .comments,
@@ -199,31 +199,31 @@
 .comments .children:before,
 .comments .children:after {
   content: '';
-  position: absolute;
   display: block;
+  position: absolute;
 }
 
 .comments .children:before {
-  top: 33px;
-  left: 23px;
-  width: 32px;
-  height: 27px;
-  border-left: 8px solid #c3c3c3;
   border-bottom: 8px solid #c3c3c3;
+  border-left: 8px solid #c3c3c3;
   border-radius: 0 0 0 8px;
+  height: 27px;
+  left: 23px;
+  top: 33px;
+  width: 32px;
 }
 
 .comments .children:after {
-  top: -5px;
-  left: 8px;
   border: 20px solid transparent;
-  border-width: 20px 19px;
   border-bottom-color: #c3c3c3;
+  border-width: 20px 19px;
+  left: 8px;
+  top: -5px;
 }
 
 .comments .comment {
-  position: relative;
   border-top: 1px dashed #363636;
+  position: relative;
 }
 
 .comments .children {
@@ -231,13 +231,13 @@
 }
 
 .comments .avatar {
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  height: 48px;
+  left: 0;
   position: absolute;
   top: 28px;
-  left: 0;
   width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  border: 1px solid #ccc;
 }
 
 .comments .says {
@@ -245,19 +245,19 @@
 }
 
 .comments .moderation-notice {
+  color: #999;
   display: inline-block;
   margin: 3px 0 8px;
-  color: #999;
 }
 
 .comments .comment-entry {
-  position: relative;
   padding: 30px 0 30px 65px;
+  position: relative;
 }
 
 .comments .comment-text p:last-child {
-  padding-bottom: 0;
   margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .comments .comment-meta {
@@ -274,22 +274,22 @@
 }
 
 .comments .comment-reply a {
+  background: #363636;
+  border-radius: 6px;
+  color: #fff;
   display: inline-block;
   padding: 5px 10px;
-  background: #363636;
-  color: #fff;
-  border-radius: 6px;
 }
 
 .comments .comment-reply a:hover {
-  text-decoration: none;
   opacity: .8;
+  text-decoration: none;
 }
 
 .comment-respond {
-  width: 100%;
-  padding-top: 30px;
   border-top: 1px solid #363636;
+  padding-top: 30px;
+  width: 100%;
 }
 
 .comment-respond h3 {
@@ -298,8 +298,8 @@
 
 .comment-respond small {
   position: absolute;
-  top: 0;
   right: 0;
+  top: 0;
 }
 
 .comment-respond label {
@@ -309,16 +309,16 @@
 
 .comment-respond input[type="text"],
 .comment-respond textarea {
-  display: block;
-  width: 80%;
-  padding: 10px;
-  border: 1px solid #ccc;
   background: #f7f7f7;
+  border: 1px solid #ccc;
+  display: block;
+  padding: 10px;
+  width: 80%;
 }
 
 .comment-respond textarea {
-  width: 100%;
   height: 100px;
+  width: 100%;
 }
 
 .comment-respond input[type="text"]:focus {
@@ -354,22 +354,22 @@
 }
 
 .comment-respond .form-submit input {
-  display: block;
-  width: 160px;
-  height: 40px;
+  background: #363636;
   border: 0;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  display: block;
   font-size: 14px;
   font-weight: bold;
-  color: #fff;
-  background: #363636;
-  cursor: pointer;
-  border-radius: 4px;
+  height: 40px;
+  width: 160px;
 }
 
 .nocomments {
-  padding-top: 12px;
-  font-weight: bold;
   font-size: 18px;
+  font-weight: bold;
+  padding-top: 12px;
 }
 
 /* ------------------------------------------------------------ *\
@@ -377,16 +377,16 @@
 \* ------------------------------------------------------------ */
 
 .search-form {
-  position: relative;
   overflow: hidden;
+  position: relative;
 }
 
 .search-form .search-form__field {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
   background: #f7f7f7;
+  border: 1px solid #ccc;
+  display: block;
+  padding: 10px;
+  width: 100%;
 }
 
 .search-form .search-form__field:focus {
@@ -410,11 +410,11 @@
 }
 
 .search-form .screen-reader-text {
+  height: 0;
+  left: 0;
+  opacity: 0.5;
   position: absolute;
   top: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-  opacity: 0.5;
   visibility: hidden;
+  width: 0;
 }

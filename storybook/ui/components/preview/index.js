@@ -1,7 +1,7 @@
 import React from 'react';
 import t from 'prop-types';
 
-import './style.scss';
+import './preview.scss';
 
 const Preview = ({ isBoxed, children }) => (
   <div className={`ui-preview ${isBoxed ? 'ui-boxed' : ''}`}>

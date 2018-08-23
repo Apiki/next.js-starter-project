@@ -1,7 +1,7 @@
 import React from 'react';
 import t from 'prop-types';
 
-import './style.scss';
+import './color-palette.scss';
 import Color from './color';
 
 const ColorPalette = ({ title, items }) => (

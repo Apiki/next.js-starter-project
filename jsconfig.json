@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "allowSyntheticDefaultImports": false,
+    "baseUrl": "./",
+    "paths": {
+      "pages/*": ["src/pages/*"],
+      "shared/*": ["src/shared/*"],
+      "@styles": ["src/shared/styles"],
+      "@components/*": ["src/shared/components/*"]
+    }
+  },
+  "exclude": ["node_modules", "dist"]
+}

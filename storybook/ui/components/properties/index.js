@@ -1,6 +1,7 @@
 import React from 'react';
+import t from 'prop-types';
 
-import './style.scss';
+import './properties.scss';
 
 const Properties = ({ data }) => (
   <div className="ui-table-responsible">
@@ -17,12 +18,20 @@ const Properties = ({ data }) => (
           <tr key={prop}>
             <td>{prop}</td>
             <td>{type}</td>
-            <td>{value}</td>
+            <td>{value || '-'}</td>
           </tr>
         ))}
       </tbody>
     </table>
   </div>
 );
+
+Properties.propTypes = {
+  data: t.arrayOf(t.shape({
+    prop: t.string.isRequired,
+    type: t.string.isRequired,
+    value: t.string,
+  })).isRequired,
+};
 
 export { Properties };

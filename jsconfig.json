@@ -4,6 +4,7 @@
     "allowSyntheticDefaultImports": false,
     "baseUrl": "./",
     "paths": {
+      "config/*": ["config/*"],
       "pages/*": ["src/pages/*"],
       "shared/*": ["src/shared/*"],
       "@styles": ["src/shared/styles"],

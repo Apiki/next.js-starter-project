@@ -36,6 +36,7 @@ module.exports = withSass({
     config.resolve.alias = Object.assign({}, config.resolve.alias, {
       pages: paths.pages,
       shared: paths.shared,
+      config: join(__dirname, 'config'),
       '@styles': join(paths.shared, 'styles'),
       '@components': join(paths.shared, 'components'),
     });

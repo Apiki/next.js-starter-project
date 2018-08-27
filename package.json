@@ -2,7 +2,6 @@
   "name": "next.js-starter-project",
   "version": "1.0.0",
   "description": "A next.js starter project.",
-  "main": "server.js",
   "keywords": [
     "nextjs",
     "react",
@@ -19,12 +18,12 @@
     "url": "https://github.com/Apiki/next.js-starter-project/issues"
   },
   "author": "Apiki Wordpress",
-  "license": "ISC",
+  "license": "MIT",
   "scripts": {
     "test": "cross-env BABEL_ENV=test jest",
-    "dev": "node server.js",
+    "dev": "node ./config",
     "build": "next build src",
-    "start": "cross-env NODE_ENV=production node server.js",
+    "start": "cross-env NODE_ENV=production node ./config",
     "lint": "yarn run lint:scripts && yarn run lint:styles",
     "lint:scripts": "eslint ./src/**",
     "lint:styles": "stylelint .src/**",

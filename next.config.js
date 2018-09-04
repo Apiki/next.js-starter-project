@@ -1,55 +1,49 @@
 const { join } = require('path');
 const withSass = require('@zeit/next-sass');
+const withFonts = require('next-fonts');
+const withImages = require('next-images');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 
 const paths = {
-  pages: join(__dirname, 'src', 'pages'),
-  shared: join(__dirname, 'src', 'shared'),
+  src: join(__dirname, 'src'),
+  static: join(__dirname, 'static'),
 };
 
-module.exports = withSass({
-  // build folder destiny
-  distDir: '../dist',
+const alias = {
+  static: paths.static,
+  helpers: join(paths.src, 'helpers'),
+  pages: join(paths.src, 'pages'),
+  reducers: join(paths.src, 'reducers'),
+  requests: join(paths.src, 'requests'),
+  routes: join(__dirname, 'routes.js'),
+  '@styles': join(paths.src, 'styles'),
+  '@components': join(paths.src, 'components'),
+};
 
-  // webpack custom config
-  webpack(config) {
-    // rules
-    config.module.rules.push(
-      {
-        enforce: 'pre',
-        test: /\.(js|jsx|css|scss)$/,
-        loader: 'import-glob',
-      },
-      {
-        test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|txt)(\?.*)?$/,
-        include: join(__dirname, '..', 'src'),
-        use: {
-          loader: 'file-loader',
-          options: {
-            name: 'assets/[name].[hash:8].[ext]',
+module.exports = withSass(
+  withImages(
+    withFonts({
+      distDir: '../dist',
+      webpack(config) {
+        config.module.rules.push(
+          {
+            enforce: 'pre',
+            test: /\.(js|jsx|css|scss)$/,
+            loader: 'import-glob',
           },
-        },
+        );
+
+        config.resolve.alias = Object.assign({}, config.resolve.alias, alias);
+
+        config.plugins.push(
+          new StyleLintPlugin({
+            configFile: '.stylelintrc.json',
+            context: paths.src,
+            emitErrors: true,
+          }),
+        );
+        return config;
       },
-    );
-
-    // aliases
-    config.resolve.alias = Object.assign({}, config.resolve.alias, {
-      pages: paths.pages,
-      shared: paths.shared,
-      config: join(__dirname, 'config'),
-      '@styles': join(paths.shared, 'styles'),
-      '@components': join(paths.shared, 'components'),
-    });
-
-    // plugins
-    config.plugins.push(
-      new StyleLintPlugin({
-        configFile: '.stylelintrc.json',
-        context: './src',
-        emitErrors: true,
-      }),
-    );
-
-    return config;
-  },
-});
+    }),
+  ),
+);

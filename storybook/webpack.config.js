@@ -2,12 +2,21 @@ const { join } = require('path');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 
 const paths = {
-  pages: join(__dirname, '..', 'src', 'pages'),
-  shared: join(__dirname, '..', 'src', 'shared'),
+  src: join(__dirname, '..', 'src'),
+  static: join(__dirname, '..', 'static'),
+};
+
+const alias = {
+  static: paths.static,
+  helpers: join(paths.src, 'helpers'),
+  routes: join(__dirname, 'routes.js'),
+  '@styles': join(paths.src, 'styles'),
+  '@components': join(paths.src, 'components'),
+  'storybook-ui': join(__dirname, 'ui'),
+  nodeModules: join(__dirname, '..', 'node_modules'),
 };
 
 module.exports = (baseConfig) => {
-  // rules
   baseConfig.module.rules.push(
     {
       enforce: 'pre',
@@ -19,32 +28,43 @@ module.exports = (baseConfig) => {
       use: ['style-loader', 'css-loader', 'sass-loader'],
     },
     {
-      test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|txt)(\?.*)?$/,
-      include: join(__dirname, '..', 'src'),
-      use: {
-        loader: 'file-loader',
-        options: {
-          name: 'assets/[name].[hash:8].[ext]',
+      test: /\.(woff|woff2|eot|ttf|otf)$/,
+      use: [
+        {
+          loader: 'url-loader',
+          options: {
+            limit: 8192,
+            fallback: 'file-loader',
+            publicPath: '/static/fonts/',
+            outputPath: 'static/fonts/',
+            name: '[name]-[hash].[ext]',
+          },
         },
-      },
+      ],
+    },
+    {
+      test: /\.(jpe?g|png|svg|gif|ico)$/,
+      use: [
+        {
+          loader: 'url-loader',
+          options: {
+            limit: 8192,
+            fallback: 'file-loader',
+            publicPath: '/static/images/',
+            outputPath: 'static/images/',
+            name: '[name]-[hash].[ext]',
+          },
+        },
+      ],
     },
   );
 
-  // aliases
-  baseConfig.resolve.alias = Object.assign({}, baseConfig.resolve.alias, {
-    pages: paths.pages,
-    shared: paths.shared,
-    nodeModules: join(__dirname, '..', 'node_modules'),
-    'storybook-ui': join(__dirname, 'ui'),
-    '@styles': join(paths.shared, 'styles'),
-    '@components': join(paths.shared, 'components'),
-  });
+  baseConfig.resolve.alias = Object.assign({}, baseConfig.resolve.alias, alias);
 
-  // plugins
   baseConfig.plugins.push(
     new StyleLintPlugin({
       configFile: '.stylelintrc.json',
-      context: './src',
+      context: paths.src,
       emitErrors: true,
     }),
   );

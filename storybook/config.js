@@ -19,7 +19,7 @@ function loadStories() {
   req = require.context('./stories', true, /\.story\.js$/);
   importAll(req);
 
-  req = require.context('../src/shared/components', true, /\.story\.js$/);
+  req = require.context('../src/components', true, /\.story\.js$/);
   importAll(req);
 }
 

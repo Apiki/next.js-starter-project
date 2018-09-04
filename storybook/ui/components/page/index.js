@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import t from 'prop-types';
 
 import './page.scss';
@@ -9,13 +9,13 @@ const Page = ({ title, children }) => (
       <h2 className="ui-title">{ title }</h2>
     </header>
 
-    <div>{ children }</div>
+    <Fragment>{ children }</Fragment>
   </main>
 );
 
 Page.propTypes = {
   title: t.string.isRequired,
-  children: t.oneOfType([t.string, t.node]).isRequired
+  children: t.oneOfType([t.string, t.node]).isRequired,
 };
 
 export { Page };

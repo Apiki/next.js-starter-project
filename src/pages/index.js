@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'config/routes';
+import { Link } from 'routes';
 import { Layout } from '@components';
 
 export default () => (

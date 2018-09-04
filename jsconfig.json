@@ -4,11 +4,14 @@
     "allowSyntheticDefaultImports": false,
     "baseUrl": "./",
     "paths": {
-      "config/*": ["config/*"],
+      "static/*": ["static/*"],
+      "helpers/*": ["src/helpers/*"],
       "pages/*": ["src/pages/*"],
-      "shared/*": ["src/shared/*"],
-      "@styles": ["src/shared/styles"],
-      "@components/*": ["src/shared/components/*"]
+      "reducers/*": ["src/reducers/*"],
+      "requests/*": ["src/requests/*"],
+      "routes/*": ["routes.js"],
+      "@styles/*": ["src/styles/*"],
+      "@components/*": ["src/components/*"]
     }
   },
   "exclude": ["node_modules", "dist"]

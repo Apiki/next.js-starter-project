@@ -4,6 +4,7 @@ module.exports = {
     "no-undef": "off",
     "no-console": "off",
     "no-param-reassign": "off",
+    "class-methods-use-this": "off",
     "import/no-unresolved": "off",
     "import/extensions": "off",
     "import/prefer-default-export": "off",

@@ -1,54 +1,55 @@
-import React, { Component } from 'react';
-import sassToJs from 'sass-to-js'
+import React, { Component, Fragment } from 'react';
+import sassToJs from 'sass-to-js';
 
-export const withSassData = (Wrapper, pseudoElement) => {
-  return class extends Component {
+export const withSassData = (Wrapper, pseudoElement) => (
+  class extends Component {
     constructor(props) {
       super(props);
+      this.state = { data: [] };
+    }
 
-      this.state = {
-        data: [],
-      };
+    componentDidMount() {
+      const data = sassToJs(
+        document.getElementById('root'),
+        {
+          pseudoEl: pseudoElement,
+          cssProperty: 'content',
+        },
+      );
+
+      this.setState({ data: this.parse(data) });
     }
 
     parse(data) {
       const items = [];
+
       Object.keys(data).map(item => items.push({
         title: item,
-        items: this.parseChildrens(data[item])
+        items: this.parseItems(data[item]),
       }));
 
       return items;
     }
 
-    parseChildrens(data) {
+    parseItems(data) {
       const items = [];
+
       Object.keys(data).map(item => items.push({
         name: item,
-        value: data[item]
+        value: data[item],
       }));
 
       return items;
-    }
-
-    componentDidMount() {
-      const data = sassToJs(document.getElementById('root'), { pseudoEl: pseudoElement, cssProperty: 'content' });
-
-      this.setState({
-        data: this.parse(data),
-      });
     }
 
     render() {
-      let { data } = this.state;
+      const { data } = this.state;
 
-      return(
-        <div>
-          {data.length && data.map((item, index) => (
-            <Wrapper key={index} {...item} />
-          ))}
-        </div>
+      return (
+        <Fragment>
+          {data.map(item => <Wrapper key={item.name} {...item} />)}
+        </Fragment>
       );
     }
   }
-};
+);

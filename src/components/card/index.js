@@ -1,6 +1,6 @@
 import React from 'react';
 import t from 'prop-types';
-import { getThumbnail } from 'shared/helpers/media';
+import { getThumbnail } from 'helpers/media';
 
 import './card.scss';
 
@@ -25,10 +25,6 @@ const Card = ({
     </div>
   </div>
 );
-
-Card.defaultProps = {
-  title: 'Lorem Ipsum',
-};
 
 Card.propTypes = {
   link: t.string.isRequired,

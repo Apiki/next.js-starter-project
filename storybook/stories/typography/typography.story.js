@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { storiesOf } from '@storybook/react';
 import { Page, Section } from 'storybook-ui';
 
@@ -12,9 +12,9 @@ const addStory = (description, callback) => (
 );
 
 addStory('All', () => (
-  <div>
+  <Fragment>
     <Section>
       <Usage />
     </Section>
-  </div>
+  </Fragment>
 ));

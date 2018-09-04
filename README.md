@@ -15,19 +15,43 @@
 
 ## Directory Structure
 ```
-src
-├── pages/
-├── shared/
-│   ├── components/
-│   ├── styles/
+.
+├── src/
+|   ├── components/                 # Todos os componentes do projeto.
+|   |   ├── example/                # Cada componente em sua devida pasta.
+|   |   |   ├── index.js            # Cada pasta do seu componente com um index.js para exportar o componente e suas variações.
+|   |   |   ├── example.js
+|   |   |   ├── example.test.js
+|   |   |   ├── example.scss
+|   |   |   └── example.story.js    # História do componente montada no Storybook.
+|   |   ├── ...
+|   |   └── index.js                # Exportação de todos os componentes para se utilizar nas páginas.
+|   ├── helpers/                    # Helpers apaixonantes do Edmar.
+|   |   └── ...                     # Alguns outros helpers (ex: media, transform...).
+|   ├── pages/                      # As paginas que compoem o projeto.
+|   |   ├── article/
+|   |   |   ├── index.js
+|   |   |   └── article.scss        # Estilo para a diagramação da página.
+|   |   ├── ...
+|   |   └── index.js                # Página inicial.
+|   ├── reducers/                   # Todos os reducers vem nesta pasta.
+|   |   ├── article/
+|   |   └── ...
+|   ├── requests/                   # Funções para realizar os requests na API.
+|   |   └── ...
+|   ├── styles/                     # Estilos globais da aplicação.
+|   |   ├── ...
+|   |   └── index.scss              # Arquivo de entry para os estilos.
+|   └── config.js                   # Arquivo contendo as URL's da API.
+├── routes.js
+├── server.js
 ├── README.md
 └── ...
 ```
 
+## Scripts
+
+
 ## VSCode Plugins Suggestions
 - [Eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 - [Stylelint](https://marketplace.visualstudio.com/items?itemName=shinnn.stylelint)
-- [Jest](https://marketplace.visualstudio.com/items?itemName=Orta.vscode-jest)
-
-## To Do List
-[] Carregar arquivos de fontes, imagens...

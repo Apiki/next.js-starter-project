@@ -1,0 +1,22 @@
+$color-palette: (
+  primary: #e94662,
+  secondary: #634293
+);
+
+$colors: (
+  common: (
+    darken: #000,
+    lighten: #fff,
+  ),
+
+  palette: (
+    primary: map-get($color-palette, primary),
+    secondary: map-get($color-palette, secondary)
+  ),
+
+  text: (
+    base: #636363,
+    title: #404040,
+    link: #DD526A
+  ),
+);

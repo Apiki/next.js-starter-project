@@ -7,10 +7,9 @@
       "static/*": ["static/*"],
       "helpers/*": ["src/helpers/*"],
       "pages/*": ["src/pages/*"],
-      "reducers/*": ["src/reducers/*"],
+      "reducers/*": ["src/redux-flow/reducers/*"],
       "requests/*": ["src/requests/*"],
       "routes/*": ["routes.js"],
-      "@styles/*": ["src/styles/*"],
       "@components/*": ["src/components/*"]
     }
   },

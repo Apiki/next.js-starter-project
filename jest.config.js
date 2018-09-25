@@ -18,4 +18,5 @@ module.exports = {
     '**/*.{js,jsx}',
     '!**/node_modules/**',
   ],
+  setupTestFrameworkScriptFile: '<rootDir>/jest/test-setup.js',
 };

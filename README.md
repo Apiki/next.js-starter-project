@@ -4,16 +4,7 @@
 
 # Next.js Starter Project
 
-## Features
-- [SASS](https://sass-lang.com/)
-- [Stylelint](https://stylelint.io/)
-- [Eslint](https://eslint.org/)
-- [Browserlist](https://github.com/browserslist/browserslist)
-- [PostCSS](https://postcss.org/)
-- [Jest](https://jestjs.io/)
-- [Storybook](https://storybook.js.org/)
-
-## Directory Structure
+## Estrutura do projeto
 ```
 .
 ├── src/
@@ -28,15 +19,20 @@
 |   |   └── index.js                # Exportação de todos os componentes para se utilizar nas páginas.
 |   ├── helpers/                    # Helpers apaixonantes do Edmar.
 |   |   └── ...                     # Alguns outros helpers (ex: media, transform...).
+|   ├── lib/                        # High-order components.
+|   |   ├── ...
 |   ├── pages/                      # As paginas que compoem o projeto.
 |   |   ├── article/
 |   |   |   ├── index.js
 |   |   |   └── article.scss        # Estilo para a diagramação da página.
 |   |   ├── ...
 |   |   └── index.js                # Página inicial.
-|   ├── reducers/                   # Todos os reducers vem nesta pasta.
-|   |   ├── article/
-|   |   └── ...
+|   ├── redux-flow/
+|   |   ├── reducers/               # Todos os reducers vem nesta pasta.
+|   |   |   ├── example/
+|   |   |   └── ...
+|   |   ├── store/
+|   |   |   └── index.js            # Configuração para criar stories no Redux.
 |   ├── requests/                   # Funções para realizar os requests na API.
 |   |   └── ...
 |   ├── styles/                     # Estilos globais da aplicação.
@@ -51,7 +47,29 @@
 
 ## Scripts
 
+É necessário ter o [yarn](https://yarnpkg.com/pt-BR/) instalado em sua máquina, pois alguns scripts dependem dele para funcionar.
 
-## VSCode Plugins Suggestions
+Caso não queria utilizar o yarn, troque o yarn|npm em `package.json/scripts`.
+
+- `dev:story`: Inicia o desenvolvimento a partir do [Storybook](https://storybook.js.org/) em "http://localhost:6006";
+- `dev` : Inicia o desenvolvimento da aplicação em "http://localhost:3000";
+- `build` : Constroi a aplicação em modo **produção** no diretório `dist/` no root do projeto;
+- `start` : Sobe um servidor na **porta 3000** em "http://localhost:3000";
+- `test` : Roda o jest realizando os testes.
+- `lint` : Roda o eslint e stylelint em todo o projeto.
+- `test:watch`: Inicia o jest em modo `watch`, recomendado para desenvolvimento em TDD.
+
+Outros scripts podem ser encontrados no arquivo `package.json`.
+
+## Features
+- [SASS](https://sass-lang.com/)
+- [Stylelint](https://stylelint.io/)
+- [Eslint](https://eslint.org/)
+- [Browserlist](https://github.com/browserslist/browserslist)
+- [PostCSS](https://postcss.org/)
+- [Jest](https://jestjs.io/)
+- [Storybook](https://storybook.js.org/)
+
+## Sugestões de plugins para VSCode
 - [Eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 - [Stylelint](https://marketplace.visualstudio.com/items?itemName=shinnn.stylelint)

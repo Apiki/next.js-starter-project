@@ -1,0 +1,9 @@
+FROM node:10.10.0-alpine
+LABEL maintainer="Jônatan Gouveia"
+
+ENV NODE_ENV=development
+COPY . /var/www/app
+WORKDIR /var/www/app
+
+ENTRYPOINT [ "yarn", "start" ]
+EXPOSE 3000

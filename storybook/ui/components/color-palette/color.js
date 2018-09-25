@@ -12,7 +12,7 @@ const Color = ({ name, value }) => (
 
 Color.propTypes = {
   value: t.string.isRequired,
-  name: t.string.isRequired
+  name: t.string.isRequired,
 }
 
 export default Color;

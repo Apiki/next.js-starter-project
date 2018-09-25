@@ -1,9 +1,11 @@
 module.exports = {
   "extends": "airbnb",
   "rules":{
+    "default-case": "off",
     "no-undef": "off",
     "no-console": "off",
     "no-param-reassign": "off",
+    "no-underscore-dangle": "off",
     "class-methods-use-this": "off",
     "import/no-unresolved": "off",
     "import/extensions": "off",

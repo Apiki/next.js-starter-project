@@ -1,4 +1,4 @@
-const { join } = require('path');
+const { join, resolve } = require('path');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 
 const paths = {
@@ -25,7 +25,20 @@ module.exports = (baseConfig) => {
     },
     {
       test: /\.(css|scss)$/,
-      use: ['style-loader', 'css-loader', 'sass-loader'],
+      use: [
+        'style-loader',
+        'css-loader',
+        'sass-loader',
+        {
+          loader: 'sass-resources-loader',
+          options: {
+            resources: [
+              resolve(__dirname, '..', 'src/styles/01-settings/*.scss'),
+              resolve(__dirname, '..', 'src/styles/02-tools/**/*.scss'),
+            ],
+          },
+        },
+      ],
     },
     {
       test: /\.(woff|woff2|eot|ttf|otf)$/,

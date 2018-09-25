@@ -20,7 +20,9 @@
   flex-wrap: wrap;
 
   // ::any directly child must have width 100%
-  > * { width: 100%; }
+  > * {
+    width: 100%;
+  }
 
   // ::magic
 
@@ -42,8 +44,13 @@
 
         width: calc((100% / #{$break-columns} + #{$_gap / $break-columns}) - #{$_gap});
 
-        &:nth-child(#{$break-columns}n) { margin-right: auto; }
-        &:not(:nth-child(#{$break-columns}n)) { margin-right: $_gap; }
+        &:nth-child(#{$break-columns}n) {
+          margin-right: auto;
+        }
+
+        &:not(:nth-child(#{$break-columns}n)) {
+          margin-right: $_gap;
+        }
       }
     }
   }

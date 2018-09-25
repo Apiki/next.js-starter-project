@@ -20,7 +20,11 @@
       "max": 10
     },
     "at-rule-empty-line-before": ["always", {
-      "except": ["first-nested"]
+      "ignore": ["after-comment"],
+      "except": [
+        "after-same-name",
+        "first-nested"
+      ]
     }],
     "custom-property-empty-line-before": [ "always", {
       "except": [
@@ -34,7 +38,14 @@
         "first-nested"
       ]
     }],
+    "declaration-block-semicolon-newline-after": "always",
+    "block-opening-brace-newline-after": "always",
+    "block-closing-brace-newline-before": "always",
     "block-closing-brace-empty-line-before": "never",
-    "rule-empty-line-before": ["always-multi-line"]
+    "block-no-empty": true,
+    "comment-no-empty": true,
+    "rule-empty-line-before": ["always", {
+      "except": ["after-single-line-comment"]
+    }]
   }
 }

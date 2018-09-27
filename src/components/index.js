@@ -6,5 +6,7 @@ export { Cta } from './cta';
 export { Speakers } from './speakers';
 export { Anchor } from './anchor';
 export { Ticket } from './ticket';
+export { Programing } from './programing';
+export { Sponsors } from './sponsors';
 export { Apiki } from './apiki';
 export { Footer } from './footer';

@@ -60,11 +60,29 @@
     content: '';
     height: 158px;
     position: absolute;
+    transition: .3s ease-in-out;
     width: 158px;
   }
 
   .speaker-thumb {
+    border: 8px solid transparent;
+    border-radius: 50%;
+    transition: .3s ease-in-out;
     z-index: 2;
+  }
+
+  &:hover {
+
+    &:before {
+      background: linear-gradient(to left bottom, #faed1f 0%, #ffa300 40%, #FB7927 100%);
+      height: 100%;
+      width: 100%;
+    }
+
+    .speaker-thumb {
+      border-color: #fff;
+      transform: scale(1.2);
+    }
   }
 }
 

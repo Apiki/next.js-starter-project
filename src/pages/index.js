@@ -9,6 +9,8 @@ import {
   Cta,
   Speakers,
   Ticket,
+  Programing,
+  Sponsors,
   Apiki,
   Footer,
 } from '@components';
@@ -38,6 +40,8 @@ const Home = () => (
         <Cta />
         <Speakers />
         <Ticket />
+        <Programing />
+        <Sponsors />
         <Apiki />
         <Footer />
       </div>

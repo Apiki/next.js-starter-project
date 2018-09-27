@@ -1,0 +1,282 @@
+.section-programing {
+  display: inline-block;
+  width: 100%;
+}
+
+.title-programing {
+  font-size:  24px;
+  font-weight: 900;
+  text-align:  center;
+  text-transform:  uppercase;
+}
+
+.header-programing {
+  align-items: center;
+  color: #ccc;
+  display: flex;
+  font-size: 20px;
+  font-weight: 100;
+  justify-content: center;
+  margin-top: 60px;
+  text-transform: uppercase;
+
+  svg {
+    font-size: 45px;
+  }
+
+  span {
+    flex-basis: 40%;
+    padding: 0 15px;
+
+    &:first-child {
+      text-align: right;
+    }
+  }
+}
+
+.programing-list {
+  align-items:  center;
+  display:  flex;
+  flex-wrap:  wrap;
+  justify-content:  center;
+  margin-top: 50px;
+}
+
+.programing-item {
+  align-items: center;
+  background: #fff;
+  display:  flex;
+  flex-basis:  100%;
+  flex-wrap:  wrap;
+  justify-content:  center;
+  margin-bottom: 0;
+  padding: 50px;
+  position:  relative;
+
+  &:after,
+  &:before {
+    content: '';
+    left:  50%;
+    position:  absolute;
+    transform: translateX(-50%);
+  }
+
+  &:before {
+    background: #ccc;
+    height:  100%;
+    width: 1px;
+  }
+
+  &:after {
+    background: #ccc;
+    border: 3px solid #f9f9f9;
+    border-radius: 15px;
+    height: 50%;
+    width: 9px;
+  }
+}
+
+.programing-content {
+  box-sizing: border-box;
+  color: #3b3b3b;
+  display: flex;
+  flex-basis: 50%;
+  flex-wrap: wrap;
+  padding-right:  20px;
+  text-align:  right;
+}
+
+.programing-hour {
+  box-sizing: border-box;
+  flex-basis: 50%;
+  font-size: 20px;
+  padding-left: 20px;
+  text-align:  left;
+}
+
+.programing-info {
+  display: flex;
+  flex-basis: 100%;
+  margin-bottom: 5px;
+}
+
+.programing-name {
+  flex-basis: 100%;
+  font-size: 20px;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.programing-speaker {
+  align-self: center;
+  box-sizing: border-box;
+  flex-basis: calc(100% - 50px);
+  font-size:  18px;
+  font-weight:  lighter;
+  margin: 0;
+  padding-right:  10px;
+}
+
+.programing-thumb-content {
+  border-radius: 50%;
+  display:  inline-block;
+  height:  50px;
+  overflow:  hidden;
+  position:  relative;
+  width:  50px;
+}
+
+.programing-thumb {
+  height: 100%;
+  max-width: 100%;
+  width:  auto;
+}
+
+.programing-item:nth-child(even) {
+
+  .programing-content {
+    order: 2;
+    padding-left: 20px;
+    text-align: left;
+  }
+
+  .programing-hour {
+    padding-right:  20px;
+    text-align:  right;
+  }
+
+  .programing-thumb-content {
+    order: 1;
+  }
+
+  .programing-name {
+    order: 0;
+  }
+
+  .programing-speaker {
+    order: 2;
+    padding-left: 10px;
+    padding-right: 0;
+  }
+}
+
+.programing-item:nth-child(4n+1) {
+
+  &:after {
+    background: #ed8300;
+  }
+}
+
+.programing-item:nth-child(4n+2) {
+
+  &:after {
+    background: #fcd818;
+  }
+}
+
+.programing-item:nth-child(4n+3) {
+
+  &:after {
+    background: #faed1f;
+  }
+}
+
+.programing-item:nth-child(4n+4) {
+
+  &:after {
+    background: #2f8dc7;
+  }
+}
+
+.btn-programing-content {
+  display: inline-block;
+  margin-top: 50px;
+  text-align: center;
+  width: 100%;
+}
+
+.btn-programing {
+  border: 1px solid #f3b01f;
+  border-radius: 5px;
+  color: #f3b01f;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 20px 75px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+@media ( max-width: 650px ) {
+
+  .programing-content {
+    flex-basis: 100%;
+  }
+
+  .programing-item {
+    align-items: center;
+    background: #fff;
+    display:  flex;
+    flex-basis:  100%;
+    flex-wrap:  wrap;
+    justify-content:  center;
+    margin-bottom: 0;
+    padding: 50px 20px;
+    position:  relative;
+
+    &:after,
+    &:before {
+      content: '';
+      left: 0;
+      position:  absolute;
+      transform: translateX(-50%);
+    }
+
+    &:before {
+      background: #ccc;
+      height:  100%;
+      width: 1px;
+    }
+
+    &:after {
+      background: #ccc;
+      border: 3px solid #f9f9f9;
+      border-radius: 15px;
+      height: 50%;
+      width: 9px;
+    }
+
+    .programing-content {
+      order: 2;
+      padding-left: 20px;
+      text-align: left;
+    }
+
+    .programing-hour {
+      flex-basis: 100%;
+      margin-bottom: 10px;
+      padding-right: 20px;
+      text-align: left;
+    }
+
+    .programing-thumb-content {
+      order: 1;
+    }
+
+    .programing-name {
+      margin-bottom: 10px;
+      order: 0;
+    }
+
+    .programing-speaker {
+      order: 2;
+      padding-left: 10px;
+      padding-right: 0;
+    }
+  }
+
+  .programing-item:nth-child(even) .programing-hour {
+    text-align: left;
+  }
+}

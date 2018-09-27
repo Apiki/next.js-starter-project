@@ -1,0 +1,120 @@
+.ticket-content {
+  border-radius: 10px;
+  box-shadow: 0px 25px 30px -15px rgba(0, 0, 0, 0.25);
+  margin-bottom: 100px;
+  overflow: hidden;
+}
+
+.content-title {
+  align-items: center;
+  background: #ff0144;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align:  center;
+  width: 100%;
+}
+
+.icon-title {
+  display: inline-block;
+
+  &.right {
+    transform: rotate(180deg);
+  }
+}
+
+.ticket-title {
+  color:  #fff;
+  display: inline-block;
+  font-size: 30px;
+  font-weight:  bold;
+  margin: 25px 0;
+  padding: 0 20px;
+  text-transform:  uppercase;
+}
+
+.content-description {
+  background: linear-gradient(to right, #f9d423 10%, #faed1f 100%);
+  box-sizing:  border-box;
+  display: inline-block;
+  padding: 50px 65px;
+  text-align:  center;
+  width: 100%;
+}
+
+.description-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 50px;
+  width: 100%;
+}
+
+.description-item {
+  display:  flex;
+  flex-basis: 33%;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+
+  .svg-inline--fa {
+    color: #fff;
+  }
+}
+
+.subtitle {
+  color:  #fff;
+  font-size:  24px;
+  margin: 0;
+  text-transform:  uppercase;
+}
+
+.item-text {
+  color:  #272727;
+  font-size:  16px;
+  padding-left: 10px;
+}
+
+.btn-ticket-content {
+  margin-top: 40px;
+}
+
+.btn-ticket {
+  background: #ff0144;
+  border-radius: 8px;
+  color:  #fff;
+  display:  inline-block;
+  font-size: 14px;
+  padding: 16px 130px;
+  text-decoration: none;
+  text-transform:  uppercase;
+}
+
+@media (max-width: 600px) {
+
+  .ticket-title {
+    font-size: 20px;
+  }
+
+  .icon-title {
+    display: none;
+  }
+
+  .description-item {
+    flex-basis: 100%;
+  }
+
+  .subtitle {
+    font-size: 18px;
+  }
+
+  .content-description {
+    padding: 25px 20px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .btn-ticket {
+    box-sizing: border-box;
+    padding: 16px 30px;
+  }
+}

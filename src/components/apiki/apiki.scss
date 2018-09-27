@@ -1,0 +1,47 @@
+.apiki-text {
+  color: #fff;
+  column-count: 2;
+  column-gap: 40px;
+  font-size:  16px;
+  line-height: 1.5;
+  margin-top: 50px;
+}
+
+.apiki-title {
+  color: #fff;
+  font-size:  24px;
+  font-weight: 900;
+  margin: 0;
+  text-transform:  uppercase;
+}
+
+.section-apiki {
+  background: #2593d4;
+  padding: 70px 0;
+}
+
+.btn-apiki-content {
+  display:  block;
+  margin-top: 50px;
+}
+
+.btn-apiki {
+  border: 1px solid #fff;
+  border-radius: 5px;
+  color: #fff;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 900;
+  padding: 13px 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: .3s ease-in-out;
+}
+
+@media ( max-width: 600px) {
+
+  .apiki-text {
+    column-count: 1;
+    column-gap: 0;
+  }
+}

@@ -1,25 +1,49 @@
 import React from 'react';
-import t from 'prop-types';
 import { connect } from 'react-redux';
-import { Layout } from '@components';
-
+import { StickyContainer, Sticky } from 'react-sticky';
+import {
+  Layout,
+  Navbar,
+  Countdown,
+  Hero,
+  Cta,
+  Speakers,
+  Ticket,
+  Apiki,
+  Footer,
+} from '@components';
 import { fetchExample } from 'reducers/example/action-creators';
+import '../components/container/container.scss';
 
-const Home = props => (
+const currentDate = new Date();
+const year = (currentDate.getMonth() === 12 && currentDate.getDate() > 5)
+  ? currentDate.getFullYear() + 1 : currentDate.getFullYear();
+
+const Home = () => (
   <Layout className="home">
-    <div className="box">
-      <h1 className="box__title">{props.title}</h1>
-      <br />
-      <hr />
-      <button type="button" onClick={props.fetchTest}>Redux dispatch title</button>
-    </div>
+    <StickyContainer>
+      <Sticky>
+        {
+          ({ style }) => (
+            <div className="fixed-header" style={style}>
+              <Navbar />
+            </div>
+          )
+        }
+      </Sticky>
+
+      <div className="page-content">
+        <Countdown date={`${year}-12-06T00:00:00`} />
+        <Hero />
+        <Cta />
+        <Speakers />
+        <Ticket />
+        <Apiki />
+        <Footer />
+      </div>
+    </StickyContainer>
   </Layout>
 );
-
-Home.propTypes = {
-  title: t.string,
-  fetchTest: t.func,
-};
 
 const mapStateToProps = ({ example }) => ({
   title: example.title,

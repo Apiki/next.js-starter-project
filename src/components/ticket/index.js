@@ -49,10 +49,6 @@ const Ticket = () => (
           </div>
         </div>
       </div>
-
-      <iframe src="https://www.sympla.com.br/wp-summit-2018__370652" id="symplaw" frameborder="0" vspace="0" hspace="0" marginheight="0" marginwidth="5"></iframe>
-
-      <iframe src="https://www.sympla.com.br/rd-summit-2018__280887" id="symplaw" frameborder="0" vspace="0" hspace="0" marginheight="0" marginwidth="5"></iframe>
     </div>
   </div>
 );

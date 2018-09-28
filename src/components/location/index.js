@@ -4,11 +4,6 @@ import './location.scss';
 const Location = () => (
   <div id="local" className="section-location">
     <div className="container">
-      <center>
-        <div id="sympla-widget-228065" height="auto"></div>
-        <script src="https://www.sympla.com.br/js/sympla.widget-pt.js/228065"></script>
-      </center>
-
       <h2 className="title-location">Local do Evento</h2>
     </div>
     <div className="location">

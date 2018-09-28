@@ -87,6 +87,12 @@
   padding: 16px 130px;
   text-decoration: none;
   text-transform:  uppercase;
+  transition: .3s ease-in-out;
+
+  &:hover {
+    background: #d62120;
+    box-shadow: 0px 4px 12px -4px #000;
+  }
 }
 
 @media (max-width: 600px) {

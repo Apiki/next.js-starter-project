@@ -39,6 +39,11 @@
   text-decoration: none;
   text-transform: uppercase;
   transition: .3s ease-in-out;
+
+  &:hover {
+    background: #fff;
+    color: #ff0144;
+  }
 }
 
 .hero-content-right {

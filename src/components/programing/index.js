@@ -2,12 +2,10 @@ import React from 'react';
 import './programing.scss';
 import Calendar from 'static/images/calendar.png';
 import Thais from 'static/images/thais.png';
-import Leo from 'static/images/leandro.png';
 import Eco from 'static/images/eco.png';
-import Eco2 from 'static/images/eco2.png';
 
 const Programing = () => (
-  <div className="section-programing">
+  <div id="programing" className="section-programing">
     <div className="container">
       <h2 className="title-programing">Programação</h2>
       <div className="header-programing">
@@ -17,6 +15,13 @@ const Programing = () => (
       </div>
 
       <div className="programing-list">
+        <div className="programing-item breakpoint">
+          <div className="programing-content">
+            <h3 className="programing-name">Inicio do evento </h3>
+          </div>
+          <span className="programing-hour">08h00</span>
+        </div>
+
         <div className="programing-item">
           <div className="programing-content">
             <h3 className="programing-name">Marketing Digital | Mercado, Tendências e Estratégias </h3>
@@ -49,7 +54,14 @@ const Programing = () => (
               </div>
             </div>
           </div>
-          <span className="programing-hour">09h00</span>
+          <span className="programing-hour">10h30</span>
+        </div>
+
+        <div className="programing-item breakpoint">
+          <div className="programing-content">
+            <h3 className="programing-name">Parada para o almoço</h3>
+          </div>
+          <span className="programing-hour">12h00</span>
         </div>
 
         <div className="programing-item">
@@ -63,7 +75,14 @@ const Programing = () => (
               </div>
             </div>
           </div>
-          <span className="programing-hour">09h30</span>
+          <span className="programing-hour">13h30</span>
+        </div>
+
+        <div className="programing-item breakpoint">
+          <div className="programing-content">
+            <h3 className="programing-name">Final do evento </h3>
+          </div>
+          <span className="programing-hour">15h00</span>
         </div>
       </div>
 

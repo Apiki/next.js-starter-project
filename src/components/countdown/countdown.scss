@@ -101,8 +101,35 @@
 
 @media (max-width: 600px ) {
 
-  .countdown-left,
+  .countdown-left {
+    flex-basis: auto;
+    margin: 0 auto;
+  }
+
   .countdown-right {
     flex-basis: 100%;
+    text-align: center;
+  }
+
+  .countdown-left .countdown-col-element strong {
+    font-size: 18px;
+    letter-spacing: 15px;
+    padding: 5px 0px;
+    padding-left: 8px;
+
+    &:before {
+      left: 24px;
+      width: 3px;
+    }
+
+    &:after {
+      right: -3px;
+      width: 12px;
+    }
+  }
+
+  .countdown-right .title-countdown {
+    font-size: 18px;
+    width: 100%;
   }
 }

@@ -1,3 +1,15 @@
+.section-apiki {
+  background: #2593d4;
+  background-position: center;
+  background-size: cover;
+  padding: 70px 0;
+}
+
+.btn-apiki-content {
+  display:  block;
+  margin-top: 50px;
+}
+
 .apiki-text {
   color: #fff;
   column-count: 2;
@@ -15,16 +27,6 @@
   text-transform:  uppercase;
 }
 
-.section-apiki {
-  background: #2593d4;
-  padding: 70px 0;
-}
-
-.btn-apiki-content {
-  display:  block;
-  margin-top: 50px;
-}
-
 .btn-apiki {
   border: 1px solid #fff;
   border-radius: 5px;
@@ -36,6 +38,11 @@
   text-decoration: none;
   text-transform: uppercase;
   transition: .3s ease-in-out;
+
+  &:hover {
+    background: #fff;
+    color: #3793d4;
+  }
 }
 
 @media ( max-width: 600px) {

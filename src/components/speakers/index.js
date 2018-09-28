@@ -61,7 +61,7 @@ const Speakers = () => (
           <img className="icon-line" src={iconline} alt="Icon line" />
         </div>
 
-        <Anchor link="#section" />
+        <Anchor link="#programing" />
       </div>
     </div>
   </div>

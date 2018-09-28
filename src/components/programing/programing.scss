@@ -132,7 +132,11 @@
   width:  auto;
 }
 
-.programing-item:nth-child(even) {
+.programing-item.breakpoint:after {
+  height: 9px;
+}
+
+.programing-item:nth-child(odd) {
 
   .programing-content {
     order: 2;
@@ -206,6 +210,11 @@
   text-decoration: none;
   text-transform: uppercase;
   transition: all 0.3s ease-in-out 0s;
+
+  &:hover {
+    background: #f3b01f;
+    color: #fff;
+  }
 }
 
 @media ( max-width: 650px ) {
@@ -215,12 +224,6 @@
   }
 
   .programing-item {
-    align-items: center;
-    background: #fff;
-    display:  flex;
-    flex-basis:  100%;
-    flex-wrap:  wrap;
-    justify-content:  center;
     margin-bottom: 0;
     padding: 50px 20px;
     position:  relative;
@@ -276,7 +279,7 @@
     }
   }
 
-  .programing-item:nth-child(even) .programing-hour {
+  .programing-item:nth-child(odd) .programing-hour {
     text-align: left;
   }
 }

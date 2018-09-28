@@ -1,8 +1,13 @@
 import React from 'react';
 import './apiki.scss';
+import Background from 'static/images/apiki-bg.png';
+
+const divStyle = {
+  backgroundImage: `url(${Background})`,
+};
 
 const Apiki = () => (
-  <div className="section-apiki">
+  <div className="section-apiki" style={divStyle}>
     <div className="container">
       <h3 className="apiki-title">A Apiki</h3>
 

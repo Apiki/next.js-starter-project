@@ -1,5 +1,33 @@
 .anchor-down {
   display: block;
+  height: 15px;
   margin-top: 55px;
+  position: relative;
   text-align: center;
+
+  .icon-arrow {
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-name: move;
+    left: 50%;
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    transition: .3s ease-in-out;
+  }
+}
+
+@keyframes move {
+
+  0% {
+    top: 0;
+  }
+
+  50% {
+    top: 7px;
+  }
+
+  100% {
+    top: 0;
+  }
 }

@@ -1,0 +1,35 @@
+.section-location {
+  display: inline-block;
+  margin-top: 120px;
+  width: 100%;
+}
+
+.title-location {
+  font-size:  24px;
+  font-weight: 900;
+  text-align:  center;
+  text-transform:  uppercase;
+}
+
+.location {
+  margin-top: 50px;
+}
+
+.place-card.place-card-large {
+  background: linear-gradient(to right, #fbd533 10%, #f3a233 100%);
+}
+
+iframe .gm-style .place-card {
+
+  .place-name {
+    color: #fff!important;
+  }
+
+  .address {
+    color: #fff!important;
+  }
+
+  a:link {
+    color: #fff!important;
+  }
+}

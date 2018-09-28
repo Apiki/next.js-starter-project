@@ -8,7 +8,7 @@ import Excerpt from 'static/images/excerpt.png';
 import Sohau from 'static/images/sohau.png';
 
 const Sponsors = () => (
-  <div className="section-sponsors">
+  <div id="patrocinadores" className="section-sponsors">
     <div className="container">
       <div className="sponsors-content">
         <span className="title-section">Um oferecimento:</span>

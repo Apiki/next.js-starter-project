@@ -10,6 +10,7 @@ import {
   Speakers,
   Ticket,
   Programing,
+  Location,
   FAQ,
   Sponsors,
   Apiki,
@@ -42,6 +43,7 @@ const Home = () => (
         <Speakers />
         <Ticket />
         <Programing />
+        <Location />
         <FAQ />
         <Sponsors />
         <Apiki />

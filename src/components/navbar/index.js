@@ -1,49 +1,72 @@
 import React from 'react';
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 import './navbar.scss';
 import Logo from 'static/images/logo.png';
 
-const Navbar = () => (
-  <div className="section-navbar">
-    <div className="container">
-      <div className="navbar">
-        <div className="navbar-logo">
-          <img src={Logo} alt="Logo Apiki WP Summit" />
-        </div>
+class Navbar extends React.Component {
+  constructor(props) {
+    super(props);
 
-        <div className="menu-burger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+    this.state = {
+      isActive: false,
+    };
 
-        <ul className="menu-list">
-          <li className="menu-item">
-            <a href="">Sobre o Evento</a>
-          </li>
+    this.handleClick = this.handleClick.bind(this);
+  }
 
-          <li className="menu-item">
-            <a href="">Progamação</a>
-          </li>
+  handleClick() {
+    this.setState({
+      isActive: !this.state.isActive,
+    });
+  }
 
-          <li className="menu-item">
-            <a href="">Local</a>
-          </li>
+  render() {
+    return (
+      <div className="section-navbar">
+        <div className="container">
+          <div className="navbar">
+            <div className="navbar-logo">
+              <a href="#">
+                <img src={Logo} alt="Logo Apiki WP Summit" />
+              </a>
+            </div>
 
-          <li className="menu-item">
-            <a href="">Patrocinadores</a>
-          </li>
+            <div className={`menu-burger ${this.state.isActive ? 'active' : ''}`} onClick={this.handleClick}>
+              <span />
+              <span />
+              <span />
+            </div>
 
-          <li className="menu-item">
-            <a href="">A Apiki</a>
-          </li>
-        </ul>
+            <ul className={`menu-list ${this.state.isActive ? 'active' : ''}`}>
+              <li className="menu-item">
+                <AnchorLink offset="100" href="#faq">Sobre o Evento</AnchorLink>
+              </li>
 
-        <div className="btn-contet">
-          <a className="btn-menu" href="#">participe</a>
+              <li className="menu-item">
+                <AnchorLink offset="100" href="#programacao">Progamação</AnchorLink>
+              </li>
+
+              <li className="menu-item">
+                <AnchorLink offset="130" href="#local">Local</AnchorLink>
+              </li>
+
+              <li className="menu-item">
+                <AnchorLink offset="100" href="#patrocinadores">Patrocinadores</AnchorLink>
+              </li>
+
+              <li className="menu-item">
+                <AnchorLink offset="100" href="#apiki">A Apiki</AnchorLink>
+              </li>
+
+              <div className="btn-contet">
+                <AnchorLink offset="150" className="btn-menu" href="#ingresso">participe</AnchorLink>
+              </div>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-);
+    );
+  }
+}
 
 export { Navbar };

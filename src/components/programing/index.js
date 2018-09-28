@@ -5,7 +5,7 @@ import Thais from 'static/images/thais.png';
 import Eco from 'static/images/eco.png';
 
 const Programing = () => (
-  <div id="programing" className="section-programing">
+  <div id="programacao" className="section-programing">
     <div className="container">
       <h2 className="title-programing">Programação</h2>
       <div className="header-programing">

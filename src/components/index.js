@@ -7,6 +7,7 @@ export { Speakers } from './speakers';
 export { Anchor } from './anchor';
 export { Ticket } from './ticket';
 export { Programing } from './programing';
+export { Location } from './location';
 export { FAQ } from './faq';
 export { Sponsors } from './sponsors';
 export { Apiki } from './apiki';

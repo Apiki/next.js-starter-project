@@ -7,7 +7,7 @@ const divStyle = {
 };
 
 const Apiki = () => (
-  <div className="section-apiki" style={divStyle}>
+  <div id="apiki" className="section-apiki" style={divStyle}>
     <div className="container">
       <h3 className="apiki-title">A Apiki</h3>
 

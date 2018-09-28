@@ -11,7 +11,7 @@ import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 
 const FAQ = () => (
 
-  <div className="section-faq">
+  <div id="faq" className="section-faq">
     <div className="container">
       <span className="faq__subtitle">AINDA TEM ALGUMA DÚVIDA?</span>
       <h2 className="faq__title">Relaxe porque sempre<br /> estaremos aqui para você.</h2>

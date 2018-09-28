@@ -34,10 +34,11 @@
 
 .menu-list {
   align-items: center;
-  flex-basis: calc( 100% - 400px );
-  justify-content: space-evenly;
-  list-style:  none;
-  padding: 0;
+  box-sizing: border-box;
+  flex-basis: calc( 100% - 235px);
+  justify-content: space-between;
+  list-style: none;
+  padding-left: 40px;
 }
 
 .menu-item {
@@ -76,38 +77,66 @@
 }
 
 
-@media ( max-width: 600px ) {
+@media ( max-width: 768px ) {
 
   .menu-burger {
     align-items: center;
     display:  flex;
     flex-basis: 30px;
     flex-wrap:  wrap;
-    height: 25px;
-    width:  50px;
+    height: 20px;
+    position: relative;
   }
 
   .menu-burger span {
-    background: #ea4c3a;
+    background: #ffa300;
     cursor: pointer;
     height: 3px;
+    position: absolute;
+    transition: .3s ease-in-out;
     width: 100%;
+
+    &:first-child {
+      top: 0;
+    }
+
+    &:nth-child(2) {
+      top: 50%;
+    }
+
+    &:last-child {
+      top: 100%;
+    }
+  }
+
+  .menu-burger.active span:first-child{
+    top: 50%;
+    transform: rotate(225deg);
+  }
+
+  .menu-burger.active span:last-child{
+    top: 50%;
+    transform: rotate(-225deg);
+  }
+
+  .menu-burger.active span:nth-child(2){
+    display: none;
   }
 
   .menu-list {
     background: #fff;
-    display: none;
     flex-basis: 100%;
     justify-content: start;
     left: 0;
     padding: 25px;
     position: absolute;
     right: 0;
-    top: 60px;
+    top: 80px;
+    transform: translateX(-100%);
     transition: .3s ease-in-out;
 
     &.active {
-      display: block;
+      transform: translateX(0);
     }
 
     .menu-item {
@@ -131,7 +160,6 @@
     flex-basis: 100%;
 
     .btn-menu {
-      margin: 0 auto;
       margin-top: 10px;
       padding: 10px 20px;
     }

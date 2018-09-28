@@ -5,7 +5,7 @@ import { faStar, faCheck, faLightbulb } from '@fortawesome/free-solid-svg-icons'
 import Arrows from 'static/images/arrows.png';
 
 const Ticket = () => (
-  <div className="section-ticket">
+  <div id="ingresso" className="section-ticket">
     <div className="container">
       <div className="ticket-content">
         <div className="content-title">
@@ -49,6 +49,10 @@ const Ticket = () => (
           </div>
         </div>
       </div>
+
+      <iframe src="https://www.sympla.com.br/wp-summit-2018__370652" id="symplaw" frameborder="0" vspace="0" hspace="0" marginheight="0" marginwidth="5"></iframe>
+
+      <iframe src="https://www.sympla.com.br/rd-summit-2018__280887" id="symplaw" frameborder="0" vspace="0" hspace="0" marginheight="0" marginwidth="5"></iframe>
     </div>
   </div>
 );

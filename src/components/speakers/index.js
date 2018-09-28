@@ -10,7 +10,7 @@ import Thais from 'static/images/thais.png';
 import { Anchor } from '@components';
 
 const Speakers = () => (
-  <div className="section-speakers">
+  <div id="palestrantes" className="section-speakers">
     <div className="container">
       <div className="speakers-content">
         <h3 className="speakers-title">

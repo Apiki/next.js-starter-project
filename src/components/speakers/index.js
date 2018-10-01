@@ -20,7 +20,9 @@ const Speakers = () => (
         <div className="speakers-list">
           <div className="speaker-item">
             <div className="speaker-thumb-content">
-              <img className="speaker-thumb" src={Eco2} alt="Eco2 face" />
+              <div className="speaker-thumb">
+                <img className="" src={Eco2} alt="Eco2 face" />
+              </div>
             </div>
             <h4 className="speaker-name">Eco Moliterno</h4>
             <span className="speaker-company">VP de Criação, Africa</span>

@@ -4,14 +4,15 @@
   margin: 50px 0;
   position: relative;
   width: 100%;
+}
 
-  .icon-line {
-    display: block;
-    height: 100%;
-    margin: auto;
-    text-align: center;
-    width: auto;
-  }
+.icon-line {
+  display: block;
+  height: 14px;
+  margin: auto;
+  max-width: 100%;
+  text-align: center;
+  width: auto;
 }
 
 .cta-content {

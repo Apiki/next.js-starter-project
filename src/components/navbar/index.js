@@ -2,6 +2,8 @@ import React from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import './navbar.scss';
 import Logo from 'static/images/logo.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 
 class Navbar extends React.Component {
   constructor(props) {
@@ -40,10 +42,27 @@ class Navbar extends React.Component {
             <ul className={`menu-list ${this.state.isActive ? 'active' : ''}`}>
               <li className="menu-item">
                 <AnchorLink offset="100" href="#faq">Sobre o Evento</AnchorLink>
+                <FontAwesomeIcon icon={faAngleDown} />
+
+                <ul className="submenu">
+                  <li className="submenu-item">
+                    <AnchorLink offset="100" href="#faq">Sobre o Evento</AnchorLink>
+                  </li>
+                  <li className="submenu-item">
+                    <AnchorLink offset="100" href="#faq">Sobre o Evento</AnchorLink>
+                  </li>
+                </ul>
               </li>
 
               <li className="menu-item">
                 <AnchorLink offset="100" href="#programacao">Progamação</AnchorLink>
+                <FontAwesomeIcon icon={faAngleDown} />
+
+                <ul className="submenu">
+                  <li className="submenu-item">
+                    <AnchorLink offset="100" href="#faq">Sobre o Evento</AnchorLink>
+                  </li>
+                </ul>
               </li>
 
               <li className="menu-item">

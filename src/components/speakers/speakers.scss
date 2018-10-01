@@ -1,13 +1,5 @@
 .section-speakers {
   margin: 50px 0;
-
-  .icon-line {
-    display: block;
-    height: 100%;
-    margin: auto;
-    text-align: center;
-    width: auto;
-  }
 }
 
 .speakers-title {
@@ -67,8 +59,19 @@
   .speaker-thumb {
     border: 8px solid transparent;
     border-radius: 50%;
+    height: 140px;
+    overflow: hidden;
+    position: relative;
     transition: .3s ease-in-out;
+    width: 140px;
     z-index: 2;
+
+    img {
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%,-50%);
+    }
   }
 
   &:hover {

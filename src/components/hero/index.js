@@ -1,6 +1,6 @@
 import React from 'react';
 import './hero.scss';
-import hero from 'static/images/hero.png';
+import HeroImage from 'static/images/hero.png';
 
 const Hero = () => (
   <div className="section-hero">
@@ -12,7 +12,7 @@ const Hero = () => (
         </div>
 
         <div className="hero-content-right">
-          <img className="hero-thumb" src={hero} alt="Raposão" />
+          <img className="hero-thumb" src={HeroImage} alt="WP-Summit" />
         </div>
       </div>
     </div>

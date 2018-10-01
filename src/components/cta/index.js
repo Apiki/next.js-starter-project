@@ -1,6 +1,6 @@
 import React from 'react';
 import './cta.scss';
-import logoDate from 'static/images/date.png';
+import LogoDate from 'static/images/date.png';
 import iconline from 'static/images/icon-line.png';
 import { Anchor } from '@components';
 
@@ -9,7 +9,7 @@ const Cta = () => (
     <div className="container">
       <div className="cta-content">
         <div className="cta-content-left">
-          <img className="cta-img" src={logoDate} alt="Apiki Logo" />
+          <img className="cta-img" src={LogoDate} alt="Apiki Logo" />
           <h2 className="cta__title">Não perca a cabeça com WordPress Headless</h2>
           <a className="btn-cta" href="#">participe</a>
         </div>

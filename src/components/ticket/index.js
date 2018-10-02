@@ -28,7 +28,7 @@ class Ticket extends React.Component {
           <div className="ticket-content">
             <div className="content-title">
               <img className="icon-title" src={Arrows} alt="" />
-              <h3 className="ticket-title">ÚLTIMO LOTE DE INGRESSOS A VENDA!</h3>
+              <h3 className="ticket-title">ÚLTIMO LOTE DE INGRESSOS!</h3>
               <img className="icon-title right" src={Arrows} alt="" />
             </div>
 
@@ -38,27 +38,27 @@ class Ticket extends React.Component {
               <div className="description-list">
                 <div className="description-item">
                   <FontAwesomeIcon icon={faCheck} />
-                  <span className="item-text">Acesso a todas as salas de palestras</span>
+                  <span className="item-text">Conteúdo Inédito</span>
                 </div>
                 <div className="description-item">
                   <FontAwesomeIcon icon={faLightbulb} />
-                  <span className="item-text">Acesso a Feira de Negócios</span>
+                  <span className="item-text">Networking</span>
                 </div>
                 <div className="description-item">
                   <FontAwesomeIcon icon={faStar} />
-                  <span className="item-text">Happy Hour (free beer)</span>
+                  <span className="item-text">Apresentação de case em Headless</span>
                 </div>
                 <div className="description-item">
                   <FontAwesomeIcon icon={faStar} />
-                  <span className="item-text">Kit do participante</span>
+                  <span className="item-text">Novas visões sobre WordPress</span>
                 </div>
                 <div className="description-item">
                   <FontAwesomeIcon icon={faCheck} />
-                  <span className="item-text">Acesso a Feira Gastronômica</span>
+                  <span className="item-text">Motivos para adotar o Headless na sua estratégia</span>
                 </div>
                 <div className="description-item">
                   <FontAwesomeIcon icon={faCheck} />
-                  <span className="item-text">Certificado Online</span>
+                  <span className="item-text">Estratégias para tomadas de decisão</span>
                 </div>
               </div>
 

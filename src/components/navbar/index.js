@@ -1,5 +1,5 @@
 import React from 'react';
-import AnchorLink from 'react-anchor-link-smooth-scroll'
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 import './navbar.scss';
 import Logo from 'static/images/logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

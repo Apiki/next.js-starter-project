@@ -31,7 +31,7 @@ const Cta = () => (
           </div>
         </div>
       </div>
-      <Anchor />
+      <Anchor link="#palestrantes" />
     </div>
   </div>
 );

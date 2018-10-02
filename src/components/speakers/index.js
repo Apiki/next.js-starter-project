@@ -14,7 +14,7 @@ const Speakers = () => (
     <div className="container">
       <div className="speakers-content">
         <h3 className="speakers-title">
-          CONHEÇA NOSSOS PALESTRANTES CONFIRMADOS
+          Conheça os palestrantes confirmados
         </h3>
 
         <div className="speakers-list">
@@ -63,7 +63,7 @@ const Speakers = () => (
           <img className="icon-line" src={iconline} alt="Icon line" />
         </div>
 
-        <Anchor link="#programing" />
+        <Anchor link="#programacao" />
       </div>
     </div>
   </div>

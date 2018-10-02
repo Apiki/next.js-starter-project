@@ -14,7 +14,7 @@ const FAQ = () => (
   <div id="faq" className="section-faq">
     <div className="container">
       <span className="faq__subtitle">AINDA TEM ALGUMA DÚVIDA?</span>
-      <h2 className="faq__title">Relaxe porque sempre<br /> estaremos aqui para você.</h2>
+      <h2 className="faq__title">A gente descasca o abacaxi pra você</h2>
 
       <Accordion>
         <AccordionItem>
@@ -24,25 +24,7 @@ const FAQ = () => (
           </AccordionItemTitle>
           <AccordionItemBody>
             <p>
-              Anim pariatur cliche reprehenderit, enim eiusmod high
-              life accusamus terry richardson ad squid. 3 wolf moon
-              officia aute, non cupidatat skateboard dolor brunch.
-              Food truck quinoa nesciunt laborum eiusmod.
-            </p>
-          </AccordionItemBody>
-        </AccordionItem>
-
-        <AccordionItem>
-          <AccordionItemTitle>
-            <h3>Quem pode participar do evento?</h3>
-            <FontAwesomeIcon icon={faArrowDown} />
-          </AccordionItemTitle>
-          <AccordionItemBody>
-            <p>
-              Anim pariatur cliche reprehenderit, enim eiusmod high
-              life accusamus terry richardson ad squid. 3 wolf moon
-              officia aute, non cupidatat skateboard dolor brunch.
-              Food truck quinoa nesciunt laborum eiusmod.
+              De acordo com a plataforma Sympla, será aceito Apple Pay, boleto bancário, cartão de crédito (American Express, Diners Club, Hipercard, Mastercard e Visa), débito online ou PayPal.
             </p>
           </AccordionItemBody>
         </AccordionItem>
@@ -54,10 +36,7 @@ const FAQ = () => (
           </AccordionItemTitle>
           <AccordionItemBody>
             <p>
-              Anim pariatur cliche reprehenderit, enim eiusmod high
-              life accusamus terry richardson ad squid. 3 wolf moon
-              officia aute, non cupidatat skateboard dolor brunch.
-              Food truck quinoa nesciunt laborum eiusmod.
+              Qualquer WordPress Lover, mas pela complexidade dos temas abordados, sugerimos: C-Leave, Developer Sênior, Gestor de Produtos e/ou Projetos.
             </p>
           </AccordionItemBody>
         </AccordionItem>
@@ -69,10 +48,7 @@ const FAQ = () => (
           </AccordionItemTitle>
           <AccordionItemBody>
             <p>
-              Anim pariatur cliche reprehenderit, enim eiusmod high
-              life accusamus terry richardson ad squid. 3 wolf moon
-              officia aute, non cupidatat skateboard dolor brunch.
-              Food truck quinoa nesciunt laborum eiusmod.
+              Sim, o WP Summit entrará para grade anual de eventos da Apiki.
             </p>
           </AccordionItemBody>
         </AccordionItem>
@@ -84,10 +60,7 @@ const FAQ = () => (
           </AccordionItemTitle>
           <AccordionItemBody>
             <p>
-              Anim pariatur cliche reprehenderit, enim eiusmod high
-              life accusamus terry richardson ad squid. 3 wolf moon
-              officia aute, non cupidatat skateboard dolor brunch.
-              Food truck quinoa nesciunt laborum eiusmod.
+              Sim, em até 48h após o evento já teremos entrado com o processo de reembolso.
             </p>
           </AccordionItemBody>
         </AccordionItem>

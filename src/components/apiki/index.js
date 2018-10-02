@@ -12,16 +12,17 @@ const Apiki = () => (
       <h3 className="apiki-title">A Apiki</h3>
 
       <div className="apiki-text">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
-        richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard
-        dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
-        terry richardson ad squid.3 wolf moon officia aute, non cupidatat
-        skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+      A Apiki é uma empresa especializada em WordPress,
+      plataforma líder mundial de gestão de conteúdo,
+      que tem a missão de desenvolver soluções digitais
+      para potencializar e integrar negócios no mundo inteiro.
+      A produtora web pertence ao grupo iMasters e atualmente
+      mantém escritórios em Governador Valadares,
+      Minas Gerais e em São Paulo, capital paulista.
       </div>
 
       <div className="btn-apiki-content">
-        <a className="btn-apiki" href="https://apiki.com">saiba mais sobre a apiki</a>
+        <a className="btn-apiki" href="https:\\apiki.com" target="_blank" rel="noopener noreferrer">saiba mais sobre a apiki</a>
       </div>
     </div>
   </div>

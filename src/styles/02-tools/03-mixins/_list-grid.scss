@@ -44,11 +44,11 @@
 
         width: calc((100% / #{$break-columns} + #{$_gap / $break-columns}) - #{$_gap});
 
-        &:nth-child(#{$break-columns}n) {
+        &:nth-of-type() {
           margin-right: auto;
         }
 
-        &:not(:nth-child(#{$break-columns}n)) {
+        &:not(:nth-of-type(#{$break-columns}n)) {
           margin-right: $_gap;
         }
       }
